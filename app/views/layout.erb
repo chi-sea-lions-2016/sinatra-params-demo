@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="/css/normalize.css">
+  <!--
+    application.css is where you put your styles
+  -->
+  <link rel="stylesheet" href="/css/application.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/application.js"></script>
+  <style>
+
+    .page-flexbox-wrapper {
+      display: flex;
+      min-height: 100vh;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    footer {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 40px;
+      align-items: center;
+      justify-content: space-around;
+      text-align: center;
+    }
+
+    form header {
+      text-align: center;
+      margin: 10px;
+    }
+
+    footer a {
+      margin: 20px;
+      /*min-width: 50%;*/
+    }
+
+    .results {
+      text-align: center;
+      line-height: 40px;
+    }
+
+    main > * {
+      margin: 40px;
+    }
+  </style>
+  <title></title>
+</head>
+<body>
+  <div class="page-flexbox-wrapper">
+    <header>
+      <a href="/">
+        <h1 style='text-align: center'>Params Hash Magic</h1>
+      </a>
+    </header>
+    <main>
+      <img src="/params_routes.png" alt="app routes" style="max-height: 250px;">
+      <%= yield %>
+    </main>
+    <footer>
+      <a href="/results/sidney">/results/sidney</a>
+      <a href="/results/sidney/one_fish/two_fish/red_fish/batman">/results/sidney/one_fish/two_fish/red_fish/batman</a>
+      <a href="/results?hobby=basket_weaving">/results?hobby=basket_weaving</a>
+      <a href="/results/sidney?hobby=basket_weaving">/results/sidney?hobby=basket_weaving</a>
+    </footer>
+  </div>
+</body>
+</html>
