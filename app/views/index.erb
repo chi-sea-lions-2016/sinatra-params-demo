@@ -1,11 +1,24 @@
 
 <form action="/results" method="post">
   <header><strong>This form posts to "/results"</strong></header>
+  <div class="field">
+    <label>Input called "name"</label>
+    <input type="text" name="name" placeholder="Enter name here..."/>
+  </div>
+  <div class="field">
+    <label>Input called "age"</label>
+    <input type="text" name="age" placeholder="Enter age here..."/>
+  </div>
+  <input type="submit" />
+</form>
+<!-- 
+<form action="/results" method="post">
+  <header><strong>This form posts to "/results"</strong></header>
   <label>Input</label>
   <input type="text" name="user[name]"/>
   <input type="text" name="user[age]"/>
   <input type="submit" />
-</form>
+</form> -->
 
 <!-- <form action="/results/awesome_variable?fantastic_key=splendiferous_value">
   <header><strong>This form posts to "/results/awesome_variable?fantastic_key=splendiferous_value"</strong></header>

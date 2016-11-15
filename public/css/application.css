@@ -1,0 +1,44 @@
+.page-flexbox-wrapper {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+footer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+
+form header {
+  text-align: center;
+  margin: 10px;
+}
+
+footer a {
+  margin: 20px;
+  /*min-width: 50%;*/
+}
+
+.results {
+  text-align: center;
+  line-height: 40px;
+}
+
+main > * {
+  margin: 40px;
+}
+
+.field {
+  margin: 15px 0;
+}
